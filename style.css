@@ -12,6 +12,7 @@ body {
   h1 {
     font-size: 2rem;
     margin-bottom: 0.5rem;
+    text-align:center;
   }
   
   p {
@@ -57,7 +58,7 @@ body {
     background-color: #161b22;
     border-radius: 0.75rem;
     padding: 1rem;
-    width: 100%;
+    width: 100vw;
     max-width: 500px;
     display: flex;
     flex-direction: column;
