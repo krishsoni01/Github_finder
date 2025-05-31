@@ -1,182 +1,184 @@
-body {
-    background-color: #0d1117;
-    color: #c9d1d9;
-    font-family: "Poppins", sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0;
-    padding: 2rem;
-  }
-  
-  h1 {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
-    text-align:center;
-  }
-  
-  p {
-    color: #8b949e;
-    margin-bottom: 2rem;
-  }
-  
-  .search-container {
-    display: flex;
-    width: 100%;
-    max-width: 500px;
-  }
+body { 
+  background-color: #0d1117;
+  color: #c9d1d9;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 2rem;
+  box-sizing: border-box;
+  width: 100vw; 
+  overflow-x: hidden; 
+}
 
-  .search-container input {
-    flex: 1;
-    padding: 0.75rem 1rem;
-    border: none;
-    border-radius: 0.5rem 0 0 0.5rem;
-    outline: none;
-    font-size: 1rem;
-    font-family: "Poppins", sans-serif;
-  }
-  
-  .search-container button {
-    padding: 0.75rem 1rem;
-    font-family: "Poppins", sans-serif;
-    background-color: rgb(54, 92, 216);
-    color: white;
-    border: none;
-    border-radius: 0 0.5rem 0.5rem 0;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
-  }
-  
-  .search-container button:hover {
-    background-color: rgb(157, 195, 240);
-    color: rgb(54, 92, 216);
-  }
-  
-  .result {
-    margin-top: 2rem;
-    background-color: #161b22;
-    border-radius: 0.75rem;
-    padding: 1rem;
-    width: 100vw;
-    max-width: 500px;
-    display: flex;
-    flex-direction: column;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
-  }
-  
-  .result.show {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  
-  .header {
-    display: flex;
-    align-items: center;
-    gap: 3rem;
-  }
-  
-  .header .avatar {
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
-    background-color: #30363d;
-    object-position: center;
-    object-fit: cover;
-  }
-  
-  .details {
-    flex: 1;
-  }
+h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
 
-  .repos {
-    margin-top: 1.5rem;
-  }
-  
-  .repos h2 {
-    margin-bottom: 1rem;
-    font-size: 1.2rem;
-    color: #58a6ff;
-  }
-  
-  .repos-container {
-    display: grid;
-    gap: 1rem;
-  }
-  
-  .repo-card {
-    background-color: #21262d;
-    border-radius: 0.5rem;
-    padding: 0.75rem;
-    transition: transform 0.2s ease;
-    cursor: pointer;
-  }
-  
-  .repo-card:hover {
-    transform: scale(1.02);
-    border: 2px solid #58a6ff;
-  }
-  
-  .repo-name {
-    font-size: 1rem;
-    color: #c9d1d9;
-    margin-bottom: 0.25rem;
-  }
-  
-  .repo-desc {
-    font-size: 0.9rem;
-    color: #8b949e;
-    margin-bottom: 0.3rem;
-  }
-  
-  .repo-lang {
-    font-size: 0.9rem;
-    color: #c9d1d9;
-  }  
-  .repo-lang a{
-    color:#58a6ff;
-  }
-  
-  .loader {
-    border: 4px solid #30363d;
-    border-top: 4px solid #58a6ff;
-    border-radius: 50%;
-    width: 32px;
-    height: 32px;
-    animation: spin 1s linear infinite;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  @keyframes spin {
-    to { transform: rotate(360deg); }
-  }
-  
-  footer {
-    margin-top: 1rem;
-    color: #8b949e;
-    font-size: 0.875rem;
-  }
-  
-  footer span {
-    color: #f85149;
-  }
-//responsive 
+p {
+  color: #8b949e;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.search-container {
+  display: flex;
+  width: 100%;
+  max-width: 500px;
+  box-sizing: border-box;
+}
+
+.search-container input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 0.5rem 0 0 0.5rem;
+  outline: none;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+.search-container button {
+  padding: 0.75rem 1rem;
+  font-family: "Poppins", sans-serif;
+  background-color: rgb(54, 92, 216);
+  color: white;
+  border: none;
+  border-radius: 0 0.5rem 0.5rem 0;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.search-container button:hover {
+  background-color: rgb(157, 195, 240);
+  color: rgb(54, 92, 216);
+}
+
+.result {
+  margin-top: 2rem;
+  background-color: #161b22;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  box-sizing: border-box;
+}
+
+.result.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.header .avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-color: #30363d;
+  object-position: center;
+  object-fit: cover;
+}
+
+.details {
+  flex: 1;
+}
+
+.repos {
+  margin-top: 1.5rem;
+}
+
+.repos h2 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  color: #58a6ff;
+}
+
+.repos-container {
+  display: grid;
+  gap: 1rem;
+}
+
+.repo-card {
+  background-color: #21262d;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.repo-card:hover {
+  transform: scale(1.02);
+  border: 2px solid #58a6ff;
+}
+
+.repo-name {
+  font-size: 1rem;
+  color: #c9d1d9;
+  margin-bottom: 0.25rem;
+}
+
+.repo-desc {
+  font-size: 0.9rem;
+  color: #8b949e;
+  margin-bottom: 0.3rem;
+}
+
+.repo-lang {
+  font-size: 0.9rem;
+  color: #c9d1d9;
+}
+
+.repo-lang a {
+  color: #58a6ff;
+}
+
+.loader {
+  border: 4px solid #30363d;
+  border-top: 4px solid #58a6ff;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  animation: spin 1s linear infinite;
+  margin: 1rem auto;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+footer {
+  margin-top: 1rem;
+  color: #8b949e;
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+footer span {
+  color: #f85149;
+}
+
 @media (max-width: 600px) {
   body {
     padding: 1rem;
-  }
-
-  h1 {
-    font-size: 1.5rem;
-    text-align: center;
-  }
-
-  p {
-    font-size: 0.9rem;
-    text-align: center;
+    overflow-x: hidden;
   }
 
   .search-container {
@@ -195,9 +197,7 @@ body {
   }
 
   .header {
-    flex-direction: column;
-    gap: 1rem;
-    text-align: center;
+    gap: 2rem;
   }
 
   .header .avatar {
