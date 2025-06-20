@@ -9,6 +9,7 @@ body {
   padding: 2rem;
   box-sizing: border-box;
   width: 100vw; 
+  height : 100vh;
   overflow-x: hidden; 
 }
 
@@ -211,6 +212,7 @@ footer span {
 
   .repo-card {
     padding: 0.5rem;
+    overflow : hidden;
   }
 
   .repo-name {
